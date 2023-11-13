@@ -1,5 +1,4 @@
 import os
-import google.generativeai as palm
 from langchain.embeddings import HuggingFaceEmbeddings
 from langchain.vectorstores import FAISS
 from langchain.document_loaders.csv_loader import CSVLoader
@@ -10,7 +9,7 @@ from dotenv import load_dotenv
 load_dotenv()  # take environment variables from .env (especially openai api key)
 
 from langchain.llms import GooglePalm
-llm = GooglePalm(GOOGLE_API_KEY = os.getenv("AIzaSyD_oyQc6pPZeaH8oZOosvaev2IMn7BKF2"), temperature=0.9, max_tokens=500)
+llm = GooglePalm(GOOGLE_API_KEY = os.getenv("YOUR_API_KEY"), temperature=0.9, max_tokens=500)
 
 loader = CSVLoader(file_path="data.csv", source_column="prompt")
 docs = loader.load()
