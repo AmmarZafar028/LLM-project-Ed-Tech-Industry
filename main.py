@@ -1,4 +1,5 @@
 import streamlit as st
+import google.generativeai as palm
 from langchain_helper import create_vector_db, get_qa_chain
 
 st.title("LangChain Q&A 🌱")
