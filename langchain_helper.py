@@ -1,4 +1,5 @@
 import os
+import google.generativeai as palm
 from langchain.embeddings import HuggingFaceEmbeddings
 from langchain.vectorstores import FAISS
 from langchain.document_loaders.csv_loader import CSVLoader
